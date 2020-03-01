@@ -1,9 +1,16 @@
+/* 
+  Arduino code for maze solver bot using 6 IR sensors.
+  * The first round is based on the left-hand wall algorithm.
+  * In the second run (corresponding to the function 'replay( )', the bot traverses the maze in an optimized path.
+*/
+
+
 #define left_center 1
 #define left_near 3
 #define left_far 4
 #define right_center 0
 #define right_near 2
-//#define right_far 5
+#define right_far 5
 
 int leftCenterReading;
 int leftNearReading;
@@ -58,7 +65,7 @@ void readSensors(){
     leftFarReading = analogRead(left_far);
     rightCenterReading = analogRead(right_center);
     rightNearReading = analogRead(right_near);
-    rightFarReading = analogRead(right_center);
+    rightFarReading = analogRead(right_far);
 
     Serial.print("leftCenterReading: ");
     Serial.println(leftCenterReading);
