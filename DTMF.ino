@@ -1,3 +1,5 @@
+/* Arduino-Bluetooth based remote-controlled car */
+
 #define m11 2
 #define m12 3
 #define m21 4
